@@ -10,4 +10,6 @@ class ClassUser extends Component {
     }
 }
 
+export default ClassUser;
+
  
