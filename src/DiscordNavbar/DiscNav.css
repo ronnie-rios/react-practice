@@ -1,0 +1,57 @@
+/* note this is w/ tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar-icon {
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+        bg-gray-800 text-blue-200
+        hover:bg-blue-50
+        rounded-3xl hover:rounded-xl
+        transition-all duration-300
+        ease-linear cursor-pointer;
+    }
+
+    .navbar-tooltip {
+        @apply absolute w-auto p-2 min-w-max left-14
+        rounded-md shadow-md
+        text-white bg-gray-900 text-xs font-bold
+        transition-all duration-100 scale-0 origin-left;
+    }
+
+    .navbar-hr {
+        @apply bg-gray-200 dark:bg-gray-800 
+        border border-gray-200 dark:border-gray-800 rounded-full
+        mx-2;
+      }
+} */
+
+/*in the tailwind.config.js file run
+ const colors = require('tailwindcss/colors')
+
+module.exports = {
+  content: ['./src/**.{js,jsx}', './public/index.html'],
+  darkMode: 'class', // class, 'media' or boolean
+  theme: {
+    extend: {
+      colors: {
+        gray: {
+          900: '#202225',
+          800: '#2f3136',
+          700: '#36393f',
+          600: '#4f545c',
+          400: '#d4d7dc',
+          300: '#e3e5e8',
+          200: '#ebedef',
+          100: '#f2f3f5',
+        },
+      },
+      spacing: {
+        88: '22rem',
+      },
+    },
+  },
+  plugins: [],
+}; */
