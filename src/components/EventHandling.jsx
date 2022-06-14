@@ -12,10 +12,9 @@ export default function EventHandling() {
     }
 
     const formHandler = (e) => {
-        setUserdata({
-            //spread the data through the obj
-            ...userData,
-            name: e.target.value
+        //spread the data through the obj
+        setUserdata((prevState) => {
+            return { ...prevState, name: e.target.value }
         })
     }
 
@@ -30,8 +29,8 @@ export default function EventHandling() {
         <div>
             <form>
                 <input type="text" name='name'/>
-                <input type="text" name='name'/>
-                <input type="text" name='name'/>
+                <input type="text" name='email'/>
+                <input type="text" name='amount'/>
             </form>
         </div>
     </div>
