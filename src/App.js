@@ -1,4 +1,5 @@
 import ClassPage from "./components/ClassPage";
+import EventHandling from "./components/EventHandling";
 import ExpenseItem from "./components/ExpenseItem";
 import UseRef2 from "./components/UseRef2";
 import UseRef3 from "./components/UseRef3";
@@ -12,6 +13,7 @@ function App() {
       <UseRef3 />
       <ClassPage />
       <ExpenseItem />
+      <EventHandling />
     </div>
   );
 }
