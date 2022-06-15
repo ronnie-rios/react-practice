@@ -1,5 +1,6 @@
 import ClassPage from "./components/classExamples/ClassPage";
 import EventHandling from "./components/EventHandling";
+import AddUser from "./components/MiniProjState/Users/AddUser";
 import ExpenseItem from "./components/useRef/ExpenseItem";
 import UseRef2 from "./components/useRef/UseRef2";
 import UseRef3 from "./components/useRef/UseRef3";
@@ -14,6 +15,7 @@ function App() {
       <ClassPage />
       <ExpenseItem />
       <EventHandling />
+      <AddUser />
     </div>
   );
 }
