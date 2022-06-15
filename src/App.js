@@ -11,7 +11,8 @@ import UseRefExample from "./components/useRef/UseRefExample";
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
-  //add user
+  //add user, it's already an obj so pass in as a param from the component and setting the state
+  //once the state is set here, its passed in to the list component
   const addUser = (userInfo) =>{
     setUserlist((prev) => {
       return [...prev, userInfo ]
