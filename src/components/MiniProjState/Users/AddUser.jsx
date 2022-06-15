@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Card from '../UI/Card'
 
-export default function AddUser() {
+export default function AddUser(props) {
     const [userData, setUserdata] = useState()
 
     const changeHandler = (e) => {
@@ -19,7 +19,7 @@ export default function AddUser() {
             return
         }
         console.log(userData);
-        setUserdata()
+        props.onAddUser(userData)
     }
     
     return (

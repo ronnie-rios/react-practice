@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function UserList(props) {
+  console.log(props);
   return (
     <div>
         {props.users.map((user) => (

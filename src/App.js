@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ClassPage from "./components/classExamples/ClassPage";
 import EventHandling from "./components/EventHandling";
 import AddUser from "./components/MiniProjState/Users/AddUser";
@@ -8,6 +9,15 @@ import UseRef3 from "./components/useRef/UseRef3";
 import UseRefExample from "./components/useRef/UseRefExample";
 
 function App() {
+  //lifted state from add user to here app and down to userlist
+  const [userList, setUserlist] = useState([])
+  //add user
+  const addUser = (userInfo) =>{
+    setUserlist((prev) => {
+      return [...prev, userInfo ]
+    })
+  }
+
   return (
     <div className="container mt-5">
       <UseRefExample />
@@ -16,8 +26,8 @@ function App() {
       <ClassPage />
       <ExpenseItem />
       <EventHandling />
-      <AddUser />
-      <UserList />
+      <AddUser onAddUser={addUser}/>
+      <UserList users={userList}/>
     </div>
   );
 }
