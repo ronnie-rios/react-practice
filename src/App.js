@@ -1,6 +1,7 @@
 import ClassPage from "./components/classExamples/ClassPage";
 import EventHandling from "./components/EventHandling";
 import AddUser from "./components/MiniProjState/Users/AddUser";
+import UserList from "./components/MiniProjState/Users/UserList";
 import ExpenseItem from "./components/useRef/ExpenseItem";
 import UseRef2 from "./components/useRef/UseRef2";
 import UseRef3 from "./components/useRef/UseRef3";
@@ -16,6 +17,7 @@ function App() {
       <ExpenseItem />
       <EventHandling />
       <AddUser />
+      <UserList />
     </div>
   );
 }
