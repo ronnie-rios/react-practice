@@ -1,9 +1,9 @@
-import ClassPage from "./components/ClassPage";
+import ClassPage from "./components/classExamples/ClassPage";
 import EventHandling from "./components/EventHandling";
-import ExpenseItem from "./components/ExpenseItem";
-import UseRef2 from "./components/UseRef2";
-import UseRef3 from "./components/UseRef3";
-import UseRefExample from "./components/UseRefExample";
+import ExpenseItem from "./components/useRef/ExpenseItem";
+import UseRef2 from "./components/useRef/UseRef2";
+import UseRef3 from "./components/useRef/UseRef3";
+import UseRefExample from "./components/useRef/UseRefExample";
 
 function App() {
   return (
