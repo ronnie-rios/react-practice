@@ -27,7 +27,7 @@ export default function EventHandling() {
             <li><button onClick={changeTitle}>quote</button></li>
         </ul>
         <div>
-            <form>
+            <form onSubmit={formHandler}>
                 <input type="text" name='name'/>
                 <input type="text" name='email'/>
                 <input type="text" name='amount'/>
