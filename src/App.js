@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ClassPage from "./components/classExamples/ClassPage";
 import EventHandling from "./components/EventHandling";
+import FormExamp2 from './components/formExample2/FormExamp2';
 import AddUser from "./components/MiniProjState/Users/AddUser";
 import UserList from "./components/MiniProjState/Users/UserList";
 import ExpenseItem from "./components/useRef/ExpenseItem";
@@ -29,6 +30,7 @@ function App() {
       <EventHandling />
       <AddUser onAddUser={addUser}/>
       <UserList users={userList}/>
+      <FormExamp2 />
     </div>
   );
 }
