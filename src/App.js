@@ -4,6 +4,7 @@ import EventHandling from "./components/EventHandling";
 import FormExamp2 from './components/formExample2/FormExamp2';
 import AddUser from "./components/MiniProjState/Users/AddUser";
 import UserList from "./components/MiniProjState/Users/UserList";
+import SortArray from './components/SortArray/SortArray';
 import ExpenseItem from "./components/useRef/ExpenseItem";
 import UseRef2 from "./components/useRef/UseRef2";
 import UseRef3 from "./components/useRef/UseRef3";
@@ -31,6 +32,7 @@ function App() {
       <AddUser onAddUser={addUser}/>
       <UserList users={userList}/>
       <FormExamp2 />
+      <SortArray />
     </div>
   );
 }
