@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ArrMethods from './components/ArrMethods/ArrMethods';
 import ClassPage from "./components/classExamples/ClassPage";
 import EventHandling from "./components/EventHandling";
 import FormExamp2 from './components/formExample2/FormExamp2';
@@ -33,6 +34,7 @@ function App() {
       <UserList users={userList}/>
       <FormExamp2 />
       <SortArray />
+      <ArrMethods />
     </div>
   );
 }
