@@ -10,8 +10,8 @@ import ExpenseItem from "./components/useRef/ExpenseItem";
 import UseRef2 from "./components/useRef/UseRef2";
 import UseRef3 from "./components/useRef/UseRef3";
 import UseRefExample from "./components/useRef/UseRefExample";
-import ReducerContext from './components/reducerContextPrac/reducerContext';
-import ApiContext from './context/ApiContext';
+import ReducerContext from './components/reducerContextPrac/ReducerContext';
+import { ApiProvider } from './context/ApiContext';
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
@@ -36,9 +36,9 @@ function App() {
       <FormExamp2 />
       <SortArray />
       <ArrMethods />
-      <ApiContext>
+      <ApiProvider>
         <ReducerContext />
-      </ApiContext>
+      </ApiProvider>
     </div>
   );
 }
