@@ -12,7 +12,7 @@ import UseRef3 from "./components/useRef/UseRef3";
 import UseRefExample from "./components/useRef/UseRefExample";
 import ReducerContext from './components/reducerContextPrac/ReducerContext';
 import { ApiProvider } from './context/ApiContext';
-import CustomHook from './components/customHook/CustomHook';
+import DisplayAll from './components/Hooks/DisplayAll';
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
@@ -40,7 +40,7 @@ function App() {
       <ApiProvider>
         <ReducerContext />
       </ApiProvider>
-      <CustomHook />
+      <DisplayAll />
     </div>
   );
 }
