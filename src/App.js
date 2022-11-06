@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="container mt-5">
-      <UseRefExample />
+      {/* <UseRefExample />
       <UseRef2 />
       <UseRef3 />
       <ClassPage />
@@ -40,7 +40,8 @@ function App() {
       <ApiProvider>
         <ReducerContext />
       </ApiProvider>
-      <DisplayAll />
+      <DisplayAll /> */}
+      <ExpenseItem />
     </div>
   );
 }
