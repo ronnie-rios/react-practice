@@ -1,10 +1,12 @@
-import React from 'react'
+import './ExpenseItem.css'
 
 function ExpenseItem() {
   return (
-    <div>
-        <h2>expenses</h2>
-        <h2>title</h2>
+    <div className='expense-item'>
+        <div className='expense-item__description'>
+            <h2>expenses</h2>
+            <div className='expense-item__price'>250</div>
+        </div>
     </div>
   )
 }
