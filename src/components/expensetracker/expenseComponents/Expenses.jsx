@@ -1,10 +1,10 @@
 import'./Expenses.css';
-import ExpenseItem from './ExpenseItem'
-
+import ExpenseItem from './ExpenseItem';
+import Card from './Card';
 export default function Expenses(props) {
   return (
-    <div className='expenses'>
+    <Card className='expenses'>
         <ExpenseItem expenses={props.expenses}/>
-    </div>
+    </Card>
   )
 }
