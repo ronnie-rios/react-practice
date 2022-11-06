@@ -12,7 +12,7 @@ import UseRefExample from "./components/useRef/UseRefExample";
 import ReducerContext from './components/reducerContextPrac/ReducerContext';
 import { ApiProvider } from './context/ApiContext';
 import DisplayAll from './components/Hooks/DisplayAll';
-import Expenses from './components/expensetracker/expenseComponents/Expenses';
+import Expenses from './components/expensetracker/expenseComponents/Expenses/Expenses';
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
