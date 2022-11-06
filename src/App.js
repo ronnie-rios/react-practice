@@ -6,13 +6,13 @@ import FormExamp2 from './components/formExample2/FormExamp2';
 import AddUser from "./components/MiniProjState/Users/AddUser";
 import UserList from "./components/MiniProjState/Users/UserList";
 import SortArray from './components/SortArray/SortArray';
-import ExpenseItem from "./components/useRef/ExpenseItem";
 import UseRef2 from "./components/useRef/UseRef2";
 import UseRef3 from "./components/useRef/UseRef3";
 import UseRefExample from "./components/useRef/UseRefExample";
 import ReducerContext from './components/reducerContextPrac/ReducerContext';
 import { ApiProvider } from './context/ApiContext';
 import DisplayAll from './components/Hooks/DisplayAll';
+import Expenses from './components/expensetracker/expenseComponents/Expenses';
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
@@ -23,6 +23,12 @@ function App() {
       return [...prev, userInfo ]
     })
   }
+  const expenses = [
+    { id: 1, title: 'car', amount: 250.23 },
+    { id: 2, title: 'phone', amount: 50.23 },
+    { id: 3, title: 'food', amount: 350.23 },
+    { id: 4, title: 'rent', amount: 1500.23 }
+  ]
 
   return (
     <div className="container mt-5">
@@ -41,7 +47,7 @@ function App() {
         <ReducerContext />
       </ApiProvider>
       <DisplayAll /> */}
-      <ExpenseItem />
+      <Expenses expenses={expenses}/>
     </div>
   );
 }
