@@ -13,6 +13,7 @@ import ReducerContext from './components/reducerContextPrac/ReducerContext';
 import { ApiProvider } from './context/ApiContext';
 import DisplayAll from './components/Hooks/DisplayAll';
 import Expenses from './components/expensetracker/expenseComponents/Expenses/Expenses';
+import NewExpense from './components/expensetracker/expenseComponents/NewExpense/NewExpense';
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
@@ -48,6 +49,7 @@ function App() {
       </ApiProvider>
       <DisplayAll /> */}
       <Expenses expenses={expenses}/>
+      <NewExpense />
     </div>
   );
 }
