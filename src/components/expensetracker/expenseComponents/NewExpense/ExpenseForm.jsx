@@ -8,12 +8,14 @@ export default function ExpenseForm() {
         amount: ''
    })
     const titleHandler = (e) => {
-        //stored in state
-        setUserInput({  ...userInput, title: e.target.value })
+        setUserInput((prevState) => {
+            return {...prevState, title: e.target.value}
+        })
     }
     const amountHandler = (e) => {
-        //stored in state
-        setUserInput({  ...userInput, amount: e.target.value })
+        setUserInput((prevState) => {
+            return {...prevState, amount: e.target.value}
+        })
         
     }
 
