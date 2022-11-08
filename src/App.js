@@ -49,7 +49,7 @@ function App() {
         <ReducerContext />
       </ApiProvider>
       <DisplayAll /> */}
-      <PassStateUp />
+      {/* <PassStateUp /> */}
       <Expenses expenses={expenses}/>
       <NewExpense />
     </div>

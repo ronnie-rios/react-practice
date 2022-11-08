@@ -12,7 +12,8 @@ function FormExamp2 (props) {
         }) 
     }
     const formSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        
         props.onFormdata(form)
     }
     return (
