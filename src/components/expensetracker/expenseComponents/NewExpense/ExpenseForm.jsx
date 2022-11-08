@@ -18,18 +18,25 @@ export default function ExpenseForm() {
         })
         
     }
-
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(userInput);
+        setUserInput({
+            title: '',
+            amount: ''
+        })
+    }
 
   return (
-    <form>
+    <form onSubmit={submitHandler} >
         <div className='new-expense__controls'>
             <div className='new-expense__control'>
                 <label>Title</label>
-                <input type='text' onChange={titleHandler}/>
+                <input type='text' value={userInput.title} onChange={titleHandler}/>
             </div>
             <div className='new-expense__control'>
                 <label>Amount</label>
-                <input type='number' min='0.01' step="0.01" onChange={amountHandler}/>
+                <input type='number' min='0.01' step="0.01" value={userInput.amount} onChange={amountHandler}/>
             </div>
         </div>
         <div className='new-expense__actions'>
