@@ -31,7 +31,9 @@ function App() {
     { id: 3, title: 'food', amount: 350.23 },
     { id: 4, title: 'rent', amount: 1500.23 }
   ]
-
+  const addExpenseHandler = (expense) => {
+    console.log('in app', expense);
+  }
   return (
     <div className="container mt-5">
       {/* <UseRefExample />
@@ -51,7 +53,7 @@ function App() {
       <DisplayAll /> */}
       {/* <PassStateUp /> */}
       <Expenses expenses={expenses}/>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
     </div>
   );
 }
