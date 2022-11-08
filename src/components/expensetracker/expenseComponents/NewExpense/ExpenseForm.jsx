@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ExpenseForm.css';
 
-export default function ExpenseForm() {
+export default function ExpenseForm(props) {
     //initial state is empty str on page loads
    const [userInput, setUserInput] = useState({
         title: '',
@@ -20,7 +20,7 @@ export default function ExpenseForm() {
     }
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log(userInput);
+        props.onSaveExpense(userInput)
         setUserInput({
             title: '',
             amount: ''

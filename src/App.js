@@ -14,6 +14,7 @@ import { ApiProvider } from './context/ApiContext';
 import DisplayAll from './components/Hooks/DisplayAll';
 import Expenses from './components/expensetracker/expenseComponents/Expenses/Expenses';
 import NewExpense from './components/expensetracker/expenseComponents/NewExpense/NewExpense';
+import PassStateUp from './components/formExample2/PassStateUp';
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
@@ -48,6 +49,7 @@ function App() {
         <ReducerContext />
       </ApiProvider>
       <DisplayAll /> */}
+      <PassStateUp />
       <Expenses expenses={expenses}/>
       <NewExpense />
     </div>
