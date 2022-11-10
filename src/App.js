@@ -35,7 +35,7 @@ function App() {
   const addExpenseHandler = (expense) => {
     setExpense((prevState) => {
       return [expense, ...prevState]
-    } )
+    })
   }
   return (
     <div className="container mt-5">
@@ -55,7 +55,7 @@ function App() {
       </ApiProvider>
       <DisplayAll /> */}
       {/* <PassStateUp /> */}
-      <Expenses expenses={expenses}/>
+      <Expenses expenses={expense}/>
       <NewExpense onAddExpense={addExpenseHandler}/>
     </div>
   );
