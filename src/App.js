@@ -55,7 +55,7 @@ function App() {
       </ApiProvider>
       <DisplayAll /> */}
       {/* <PassStateUp /> */}
-      <Expenses expenses={expense}/>
+      <Expenses expenses={expenses}/>
       <NewExpense onAddExpense={addExpenseHandler}/>
     </div>
   );
