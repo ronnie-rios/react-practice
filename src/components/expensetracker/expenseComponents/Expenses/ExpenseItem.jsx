@@ -10,15 +10,17 @@ function ExpenseItem(props) {
     console.log('click!!!')
   }
   return (
-    <Card className='expense-item'>
-      {props.expenses.map(item => (
-        <div id={item.id} className='expense-item__description'>
-            <h2>expenses: {item.title}{title}</h2>
-            <div className='expense-item__price'>{item.amount}</div>
-            <button onClick={clickHandler}>zClick!</button>
-        </div>
-      ))}
-    </Card>
+    <li>
+      <Card className='expense-item'>
+        {props.expenses.map(item => (
+          <div id={item.id} className='expense-item__description'>
+              <h2>expenses: {item.title}{title}</h2>
+              <div className='expense-item__price'>{item.amount}</div>
+              <button onClick={clickHandler}>zClick!</button>
+          </div>
+        ))}
+      </Card>
+    </li>
   )
 }
 
