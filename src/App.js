@@ -15,9 +15,16 @@ import DisplayAll from './components/Hooks/DisplayAll';
 import Expenses from './components/expensetracker/expenseComponents/Expenses/Expenses';
 import NewExpense from './components/expensetracker/expenseComponents/NewExpense/NewExpense';
 import PassStateUp from './components/formExample2/PassStateUp';
+const expenses = [
+  { id: 1, title: 'car', amount: 250.23 },
+  { id: 2, title: 'phone', amount: 50.23 },
+  { id: 3, title: 'food', amount: 350.23 },
+  { id: 4, title: 'rent', amount: 1500.23 }
+]
 function App() {
   //lifted state from add user to here app and down to userlist
   const [userList, setUserlist] = useState([])
+  const [expense, setExpense] = useState(expenses)
   //add user, it's already an obj so pass in as a param from the component and setting the state
   //once the state is set here, its passed in to the list component
   const addUser = (userInfo) =>{
@@ -25,14 +32,10 @@ function App() {
       return [...prev, userInfo ]
     })
   }
-  const expenses = [
-    { id: 1, title: 'car', amount: 250.23 },
-    { id: 2, title: 'phone', amount: 50.23 },
-    { id: 3, title: 'food', amount: 350.23 },
-    { id: 4, title: 'rent', amount: 1500.23 }
-  ]
   const addExpenseHandler = (expense) => {
-    console.log('in app', expense);
+    setExpense((prevState) => {
+      return [expense, ...prevState]
+    } )
   }
   return (
     <div className="container mt-5">
@@ -52,7 +55,7 @@ function App() {
       </ApiProvider>
       <DisplayAll /> */}
       {/* <PassStateUp /> */}
-      <Expenses expenses={expenses}/>
+      <Expenses expenses={expense}/>
       <NewExpense onAddExpense={addExpenseHandler}/>
     </div>
   );
