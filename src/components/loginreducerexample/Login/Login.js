@@ -34,27 +34,20 @@ const Login = (props) => {
     value: '',
     isValid: null
   });
+
   useEffect(() => {
-    console.log('EFFECT RUNNING');
+    const identifier = setTimeout(() => {
+      console.log('Checking form validity!');
+      setFormIsValid(
+        emailState.isValid && pwState.isValid
+      );
+    }, 500);
 
     return () => {
-      console.log('EFFECT CLEANUP');
+      console.log('CLEANUP');
+      clearTimeout(identifier);
     };
-  }, []);
-
-  // useEffect(() => {
-  //   const identifier = setTimeout(() => {
-  //     console.log('Checking form validity!');
-  //     setFormIsValid(
-  //       enteredEmail.includes('@') && enteredPassword.trim().length > 6
-  //     );
-  //   }, 500);
-
-  //   return () => {
-  //     console.log('CLEANUP');
-  //     clearTimeout(identifier);
-  //   };
-  // }, [enteredEmail, enteredPassword]);
+  }, [emailState, pwState]);
 
   const emailChangeHandler = (e) => {
     //pass in an action, usually an obj with a property of type and a value that identifies it, and a payload
