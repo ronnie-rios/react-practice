@@ -35,11 +35,13 @@ const Login = (props) => {
     isValid: null
   });
 
+  const { isValid: emailIsVald } = emailState;
+  const { isValid: pwIsVald } = pwState;
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity!');
       setFormIsValid(
-        emailState.isValid && pwState.isValid
+        emailIsVald.isValid && pwIsVald.isValid
       );
     }, 500);
 
@@ -47,7 +49,7 @@ const Login = (props) => {
       console.log('CLEANUP');
       clearTimeout(identifier);
     };
-  }, [emailState, pwState]);
+  }, [emailIsVald, pwIsVald]);
 
   const emailChangeHandler = (e) => {
     //pass in an action, usually an obj with a property of type and a value that identifies it, and a payload
