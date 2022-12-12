@@ -15,6 +15,8 @@ import DisplayAll from './components/Hooks/DisplayAll';
 import Expenses from './components/expensetracker/expenseComponents/Expenses/Expenses';
 import NewExpense from './components/expensetracker/expenseComponents/NewExpense/NewExpense';
 import PassStateUp from './components/formExample2/PassStateUp';
+import ContextForm from './components/ContextPracticeII/ContextForm';
+import PracticeContext, { PracticeProvider } from './components/ContextPracticeII/context/contextpracticeII';
 const expenses = [
   { id: 1, title: 'car', amount: 250.23 },
   { id: 2, title: 'phone', amount: 50.23 },
@@ -57,6 +59,10 @@ function App() {
       {/* <PassStateUp /> */}
       <Expenses expenses={expense}/>
       <NewExpense onAddExpense={addExpenseHandler}/>
+      <PracticeProvider>
+        <ContextForm />
+      </PracticeProvider>
+
     </div>
   );
 }
