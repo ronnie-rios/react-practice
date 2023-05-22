@@ -1,6 +1,7 @@
-import React from 'react'
+import { useState } from 'react'
 
 const GetLocal = () => {
+    const [storage, setStorage] = useState([])
   return (
     <div>GetLocal</div>
   )
