@@ -19,6 +19,7 @@ import ContextForm from './components/ContextPracticeII/ContextForm';
 import PracticeContext, { PracticeProvider } from './components/ContextPracticeII/context/contextpracticeII';
 import { SongList } from './components/contextpracIII/SongList';
 import PostLocal from './components/LocalStorage/PostLocal';
+import Passcode from './components/Passcode/Passcode';
 const expenses = [
   { id: 1, title: 'car', amount: 250.23 },
   { id: 2, title: 'phone', amount: 50.23 },
@@ -65,7 +66,8 @@ function App() {
         <ContextForm />
       </PracticeProvider>
       <SongList />
-      <PostLocal />
+      {/* <PostLocal /> */}
+      <Passcode />
 
     </div>
   );
