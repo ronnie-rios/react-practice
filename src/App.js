@@ -66,7 +66,7 @@ function App() {
         <ContextForm />
       </PracticeProvider>
       <SongList />
-      {/* <PostLocal /> */}
+      <PostLocal />
       <Passcode />
 
     </div>
